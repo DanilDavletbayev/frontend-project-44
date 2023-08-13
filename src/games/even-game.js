@@ -1,14 +1,14 @@
-import getRandomNum from '../random-number.js';
-import startGames from '../index.js';
-const isEven = (num) => num % 2 === 0;
+import getRandomNum from '../random-number.js'; // Внедрили функцию получения рандомного числа
+import startGames from '../index.js'; // Внедрили функцию структуры игры
+const isEven = (num) => num % 2 === 0; // проверяем число на четность
 
-const isText = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isText = 'Answer "yes" if the number is even, otherwise answer "no".'; // переменная которая выдает нам правило ответа в игре
 
-const getDataGames = () => {
-    const question = getRandomNum();
+const getDataGames = () => { 
+    const question = getRandomNum(); // вводим в переменную вопроса функцию получения рандомного числа
 
-    const trueAnswer = isEven(question) ? 'yes' : 'no';
-    return [String(question) , trueAnswer]
+    const trueAnswer = isEven(question) ? 'yes' : 'no'; // Создаем тернарный оператор с применением функции проверки на четность рандомного числа и ответом
+    return [String(question) , trueAnswer] // возвращаем
 };
 
 const startBrainEvenGames = () => startGames(isText, getDataGames);
