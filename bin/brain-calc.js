@@ -1,8 +1,5 @@
-import getRandomNum from '../random-number.js'; // Внедрили функцию получения рандомного числа
-import startGames from '../index.js'; // Внедрили функцию структуры игры
+#!/usr/bin/env node
 
-const isText = "What is the result of the expression?";
+import startBrainCalcGames from "../src/games/calc-game.js"
 
-const operatorArray = ['+', '-', '*'];
-
-const randomOperator = Math.floor(Math.random() * operatorArray.length);
+startBrainCalcGames();
